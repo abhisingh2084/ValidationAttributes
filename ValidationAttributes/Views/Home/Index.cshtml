@@ -1,0 +1,19 @@
+﻿@model ValidationAttributes.Models.Student;
+@{
+    ViewData["Title"] = "Home Page";
+}
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form asp-controller="Home" asp-action="index" method="Post">
+                <input placeholder="Enter Name" asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name"></span>
+                <br/>
+                <input type="submit" value="Submit" class="btn btn-outline-primary"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+
