@@ -24,7 +24,7 @@ namespace ValidationAttributes.Controllers
         {
             if(ModelState.IsValid) 
             { 
-                return "Student Name : " + std.Name; 
+                return " Student Name : " + std.Name + " Student Email : " + std.Email + " Student Age : " + std.Age; 
             }
             else
             {
