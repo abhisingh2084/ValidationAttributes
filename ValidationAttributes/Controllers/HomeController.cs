@@ -22,8 +22,15 @@ namespace ValidationAttributes.Controllers
         [HttpPost]
         public string Index(Student std)
         {
-
-            return "Student Name : " + std.Name;
+            if(ModelState.IsValid) 
+            { 
+                return "Student Name : " + std.Name; 
+            }
+            else
+            {
+                return "Validation fail.....";
+            }
+           
         }
 
         public IActionResult Privacy()
